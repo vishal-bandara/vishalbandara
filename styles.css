@@ -20,105 +20,120 @@ body::before {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove padding if any */
 }
-/* General Styling */
+/* General Styles */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: orange;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center; /* Center-aligns all text elements */
 }
 
-h1, h2, h3 {
-    text-align: center;
-    color: orange;
-}
-
-p, ul, li {
-    color: #ddd;
-}
-
-/* Header Styling */
 header {
-    background-image: url('vish-watermark.png');
-    background-size: cover;
+    background-color: #111;
+    color: orange;
     padding: 50px 0;
-    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the header content */
 }
 
 .profile-pic {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-bottom: 10px; /* Space below the image */
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-.header-content {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text alignment */
+h1 {
+    font-size: 36px;
+    margin: 0;
 }
 
-.header-content h2 {
-    margin: 5px 0;
-    font-size: 1.5rem;
-}
-
-/* Section Styling */
-section {
-    padding: 50px;
-    text-align: center;
-}
-
-#projects .project {
-    margin-bottom: 30px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
+h2 {
+    font-size: 24px;
     margin: 10px 0;
 }
 
-/* Contact Form Styling */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
+/* About Section */
+#about {
+    padding: 50px 20px;
+    background-color: #222;
+    color: white;
 }
 
-input, textarea {
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    background-color: #222;
+    color: white;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Center the contact form */
+    text-align: left;
+}
+
+#contact-form label, #contact-form input, #contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#contact-form button {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-button {
     background-color: orange;
-    color: black;
-    padding: 10px 20px;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #ff6600;
+#contact-form button:hover {
+    background-color: #333;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
+    background-color: #111;
     color: orange;
+    padding: 20px 0;
+    text-align: center;
 }
+
