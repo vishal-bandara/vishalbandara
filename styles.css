@@ -68,6 +68,29 @@ header {
     font-size: 1.5rem;
 }
 
+/* Navigation Styling */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center navigation */
+    margin-top: 20px; /* Space between header and nav */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+header nav ul li a {
+    color: orange; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 /* Section Styling */
 section {
     padding: 50px;
@@ -114,6 +137,11 @@ input#name, input#email {
     margin-bottom: 10px;
     border: none; /* No border for a clean look */
     border-radius: 5px; /* Rounded corners */
+}
+
+textarea {
+    height: auto; /* Allow the height to adjust for the textarea */
+    min-height: 100px; /* Set a minimum height */
 }
 
 button {
