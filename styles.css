@@ -11,6 +11,7 @@ body::before {
     pointer-events: none; /* Prevent interactions */
     font-family: 'Arial', sans-serif; /* Or use your preferred font */
 }
+
 #name {
     display: inline-block;
     overflow: hidden; /* Ensures the text is hidden until animated */
@@ -20,6 +21,7 @@ body::before {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove padding if any */
 }
+
 /* General Styling */
 body {
     margin: 0;
@@ -100,11 +102,11 @@ input, textarea {
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding is included in the total width */
 }
 
 /* Ensure name and email fields are the same size */
-input[type="name"], input[type="email"] {
+input#name, input#email {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -132,6 +134,7 @@ footer {
     background-color: #222;
     color: orange;
 }
+
 .social-links {
     margin-top: 10px;
 }
