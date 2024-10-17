@@ -51,11 +51,14 @@ header {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    margin-bottom: 10px; /* Space below the image */
 }
 
-.header-content h1 {
-    margin: 10px 0;
-    font-size: 3rem;
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text alignment */
 }
 
 .header-content h2 {
