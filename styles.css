@@ -122,3 +122,17 @@ footer {
     background-color: #222;
     color: orange;
 }
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #fff; /* Change this to match your theme */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #f39c12; /* Change this to your accent color */
+}
