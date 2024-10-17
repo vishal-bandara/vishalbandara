@@ -11,6 +11,33 @@ body::before {
     pointer-events: none; /* Prevent interactions */
     font-family: 'Arial', sans-serif; /* Or use your preferred font */
 }
+#name {
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is hidden until animated */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-right: 4px solid; /* Creates a cursor effect */
+    animation: typing 3s steps(11), blink 0.75s step-end infinite; /* Adjust timing and steps as needed */
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black; /* Change to your text color */
+    }
+}
 
 
 /* General Styling */
