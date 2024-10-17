@@ -103,6 +103,15 @@ input, textarea {
     box-sizing: border-box;
 }
 
+/* Ensure name and email fields are the same size */
+input[type="name"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
 button {
     background-color: orange;
     color: black;
