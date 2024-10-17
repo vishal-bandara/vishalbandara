@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vish's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- EmailJS Library -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("2f11qSpPzgOlVux57"); // Public key (DO NOT share your secret key)
+        })();
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="C:\Users\vishal\Desktop\Portfolio_website\IMG-20240617-WA0057.jpg" alt="Your Photo" class="profile-pic">
+            <h1>Vishal Bandara</h1>
+            <h2>Web Developer | Designer</h2>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Vish, a passionate web developer with a focus on building responsive and interactive websites. I love crafting creative digital experiences.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>A personal portfolio website showcasing my work and skills, built using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: E-commerce Site</h3>
+            <p>An e-commerce website with a full-featured shopping cart, built using React and Node.js.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React.js, Node.js</li>
+            <li>UI/UX Design</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <!-- Add id to the form for targeting it in JavaScript -->
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vish. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Add JavaScript to handle form submission -->
+    <script type="text/javascript">
+        // Attach event listener to the form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            // Send form using EmailJS
+            emailjs.sendForm('service_brrhpcz', 'template_dj268fn', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email. Please try again later.');
+                });
+        });
+    </script>
+
+</body>
+</html>
