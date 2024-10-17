@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vish's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- EmailJS Library -->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <script type="text/javascript">
         (function() {
             emailjs.init("2f11qSpPzgOlVux57"); // Public key (DO NOT share your secret key)
         })();
     </script>
-
 </head>
 <body>
     <header>
@@ -25,6 +22,14 @@
             <img src="IMG-20240617-WA0057.jpg" alt="Your Photo" class="profile-pic">
             <h1>Vishal Bandara</h1>
             <h2>Web Developer | Designer</h2>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -56,7 +61,6 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <!-- Add id to the form for targeting it in JavaScript -->
         <form id="contact-form">
             <label for="name">Name:</label>
             <input type="name" id="name" name="name" required>
@@ -71,18 +75,17 @@
         </form>
     </section>
 
-<footer>
-    <p>&copy; 2024 Vish. All Rights Reserved.</p>
-    <div class="social-links">
-        <a href="https://web.facebook.com/vishal.bandara.35/?_rdc=1&_rdr" target="_blank">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/mr._vish_boy/" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Vish. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://web.facebook.com/vishal.bandara.35/?_rdc=1&_rdr" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/mr._vish_boy/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
 
     <!-- Add JavaScript to handle form submission -->
     <script type="text/javascript">
@@ -100,7 +103,16 @@
                     alert('Failed to send email. Please try again later.');
                 });
         });
-    </script>
 
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
