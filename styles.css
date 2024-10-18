@@ -1,3 +1,12 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: rgb(255, 204, 0);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
 
 /* General fade-in class */
 .fade-in {
@@ -8,6 +17,48 @@
 /* Fade-in visible state */
 .fade-in.visible {
     opacity: 1; /* Fully visible when scrolled into view */
+}
+
+/* Header Styling */
+header {
+    background-image: url('vish-watermark.png'); /* Replace with your watermark image */
+    background-size: cover;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-in-out forwards; /* Apply the animation */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header Text Animation */
+.header-content h1 {
+    font-size: 3.5rem; /* Adjust size as needed */
+    color: orange; /* Text color */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease-in-out forwards; /* Fade in over 2 seconds */
+}
+
+.header-content h2 {
+    font-family: 'Arial', sans-serif; /* Your preferred font */
+    font-size: 3.5rem; /* Adjust the size */
+    color: orange;
+    text-align: center; /* Center the text */
+    opacity: 0; /* Initially hidden */
+    animation: fadeInOut 4s ease-in-out infinite; /* Fade in and out over 4 seconds */
+    margin: 0 auto; /* Center the text horizontally */
 }
 
 /* Navigation Styling */
@@ -39,80 +90,10 @@ header nav ul li a:hover {
     text-decoration: none; /* Keep no underline */
 }
 
-/* Keyframes for fade-in and fade-out */
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-/* Apply fade-in and fade-out effect to "Web Developer | Designer" */
-.header-content h2 {
-    font-family: 'Arial', sans-serif; /* Your preferred font */
-    font-size: 3.5rem; /* Adjust the size */
-    color: orange;
-    text-align: center; /* Center the text */
-    opacity: 0; /* Initially hidden */
-    animation: fadeInOut 4s ease-in-out infinite; /* Fade in and out over 4 seconds */
-    margin: 0 auto; /* Center the text horizontally */
-}
-
-/* Add keyframes for fade-in and slide-up animation */
-/* Add keyframes for fade-in effect */
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* Start fully transparent */
-    }
-    to {
-        opacity: 1; /* End fully visible */
-    }
-}
-
-/* Apply fade-in animation to "Vishal Bandara" */
-.header-content h1 {
-    font-size: 3.5rem; /* Adjust size as needed */
-    color: orange; /* Text color */
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 2s ease-in-out forwards; /* Fade in over 2 seconds */
-}
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px); /* Starts 50px lower */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Ends at its original position */
-    }
-}
-
-/* Watermark Styling */
-body::before {
-    content: "Vish";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 45rem; /* Adjust the size as needed */
-    color: rgba(252, 252, 252, 0.096); /* Orange color with low opacity */
-    z-index: -1; /* Ensure it's behind all content */
-    pointer-events: none; /* Prevent interactions */
-    font-family: 'Arial', sans-serif; /* Or use your preferred font */
-}
-
-/* General Styling */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: rgb(255, 204, 0);
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+/* Section Styling */
+section {
+    padding: 50px;
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -124,68 +105,12 @@ p, ul, li {
     color: #ddd;
 }
 
-/* Header Styling */
-header {
-    background-image: url('vish-watermark.png');
-    background-size: cover;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 10px;
-    opacity: 0; /* Initially hidden */
-    animation: fadeInUp 1s ease-in-out forwards; /* Apply the animation */
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.header-content h2 {
-    margin: 5px 0;
-    font-size: 1.5rem;
-}
-
-/* Navigation Styling */
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: orange;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Section Styling */
-section {
-    padding: 50px;
-    text-align: center;
-}
-
+/* Projects Styling */
 #projects .project {
     margin-bottom: 30px;
 }
 
+/* Skills List Styling */
 ul {
     list-style: none;
     padding: 0;
@@ -252,4 +177,123 @@ footer {
 
 .social-links a:hover {
     color: #f39c12;
+}
+
+/* Watermark Styling */
+body::before {
+    content: "Vish";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45rem; /* Adjust the size as needed */
+    color: rgba(252, 252, 252, 0.096); /* Orange color with low opacity */
+    z-index: -1; /* Ensure it's behind all content */
+    pointer-events: none; /* Prevent interactions */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Starts 50px lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends at its original position */
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .header-content h1 {
+        font-size: 3rem; /* Smaller heading for medium screens */
+    }
+    
+    .header-content h2 {
+        font-size: 2.5rem; /* Smaller subheading */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Adjust spacing for vertical layout */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem; /* Smaller heading for tablets */
+    }
+
+    .header-content h2 {
+        font-size: 2rem; /* Smaller subheading */
+    }
+
+    form {
+        padding: 15px; /* Reduce padding in contact form */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button size */
+    }
+
+    .profile-pic {
+        width: 120px; /* Smaller profile picture */
+        height: 120px;
+    }
+
+    body::before {
+        font-size: 30rem; /* Adjust watermark size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .header-content h2 {
+        font-size: 1.5rem; /* Smaller subheading */
+    }
+
+    form {
+        padding: 10px; /* Further reduce padding in contact form */
+    }
+
+    button {
+        padding: 6px 12px; /* Adjust button size */
+    }
+
+    .profile-pic {
+        width: 100px; /* Smaller profile picture */
+        height: 100px;
+    }
+
+    body::before {
+        font-size: 20rem; /* Adjust watermark size */
+    }
 }
