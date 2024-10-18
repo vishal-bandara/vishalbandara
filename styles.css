@@ -7,6 +7,56 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
 }
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: rgb(255, 204, 0);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Clock Styling */
+.clock {
+    font-size: 1.5rem; /* Font size for the clock */
+    color: rgb(137, 137, 137); /* Text color for the clock */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease-in-out forwards; /* Fade in effect */
+    text-align: center; /* Center the clock content */
+    font-family: 'Square Peg', cursive; /* Apply Square Peg font */
+    line-height: 1.5; /* Adjust line height to space out the date and time */
+    background: rgba(0, 0, 0, 0.6); /* Optional: Add a background for readability */
+    padding: 20px; /* Add padding around the clock */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Layout - Adjust clock size for smaller screens */
+@media (max-width: 768px) {
+    .clock {
+        font-size: 5vw; /* Increase the font size on smaller screens */
+        margin-top: 3vh; /* Adjust the top margin for smaller screens */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .clock {
+        font-size: 6vw; /* Even larger font for mobile */
+        margin-top: 5vh; /* More space on top */
+    }
+}
 
 /* General fade-in class */
 .fade-in {
