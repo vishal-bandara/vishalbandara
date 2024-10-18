@@ -1,3 +1,96 @@
+
+/* General fade-in class */
+.fade-in {
+    opacity: 0; /* Hidden initially */
+    transition: opacity 1.5s ease-in-out; /* Smooth transition for fading in */
+}
+
+/* Fade-in visible state */
+.fade-in.visible {
+    opacity: 1; /* Fully visible when scrolled into view */
+}
+
+/* Navigation Styling */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center navigation */
+    margin-top: 20px; /* Space between header and nav */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+header nav ul li a {
+    color: orange; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+    padding: 10px 20px; /* Add padding to make it look like a button */
+    border: 2px solid orange; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+header nav ul li a:hover {
+    background-color: orange; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+    text-decoration: none; /* Keep no underline */
+}
+
+/* Keyframes for fade-in and fade-out */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Apply fade-in and fade-out effect to "Web Developer | Designer" */
+.header-content h2 {
+    font-family: 'Arial', sans-serif; /* Your preferred font */
+    font-size: 3.5rem; /* Adjust the size */
+    color: orange;
+    text-align: center; /* Center the text */
+    opacity: 0; /* Initially hidden */
+    animation: fadeInOut 4s ease-in-out infinite; /* Fade in and out over 4 seconds */
+    margin: 0 auto; /* Center the text horizontally */
+}
+
+/* Add keyframes for fade-in and slide-up animation */
+/* Add keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Apply fade-in animation to "Vishal Bandara" */
+.header-content h1 {
+    font-size: 3.5rem; /* Adjust size as needed */
+    color: orange; /* Text color */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease-in-out forwards; /* Fade in over 2 seconds */
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Starts 50px lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends at its original position */
+    }
+}
+
 /* Watermark Styling */
 body::before {
     content: "Vish";
@@ -5,21 +98,11 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20rem; /* Adjust the size as needed */
-    color: rgba(255, 165, 0, 0.1); /* Orange color with low opacity */
+    font-size: 45rem; /* Adjust the size as needed */
+    color: rgba(252, 252, 252, 0.096); /* Orange color with low opacity */
     z-index: -1; /* Ensure it's behind all content */
     pointer-events: none; /* Prevent interactions */
     font-family: 'Arial', sans-serif; /* Or use your preferred font */
-}
-
-#name {
-    display: inline-block;
-    overflow: hidden; /* Ensures the text is hidden until animated */
-    white-space: nowrap; /* Prevents text from wrapping */
-    border-right: 4px solid; /* Creates a cursor effect */
-    animation: typing 3s steps(11), blink 0.75s step-end infinite; /* Animation for typing and blinking */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove padding if any */
 }
 
 /* General Styling */
@@ -27,7 +110,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
-    color: orange;
+    color: rgb(255, 204, 0);
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
 }
@@ -53,14 +136,16 @@ header {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-bottom: 10px; /* Space below the image */
+    margin-bottom: 10px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-in-out forwards; /* Apply the animation */
 }
 
 .header-content {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text alignment */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .header-content h2 {
@@ -73,22 +158,22 @@ header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center navigation */
-    margin-top: 20px; /* Space between header and nav */
+    justify-content: center;
+    margin-top: 20px;
 }
 
 header nav ul li {
-    margin: 0 15px; /* Space between nav items */
+    margin: 0 15px;
 }
 
 header nav ul li a {
-    color: orange; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make links bold */
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 /* Section Styling */
@@ -120,28 +205,17 @@ form {
 }
 
 input, textarea {
-    width: 100%; /* Ensures all fields take up the full width */
-    padding: 10px; /* Padding for inner space */
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    box-sizing: border-box; /* Ensures padding is included in the total width */
-    height: 50px; /* Set a fixed height for uniformity */
-}
-
-/* Ensure name and email fields are the same size */
-input#name, input#email {
-    width: 100%; /* Ensure both fields take the full width */
-    height: 50px; /* Set the same height for both fields */
-    padding: 10px; /* Padding for consistency */
-    margin-bottom: 10px;
-    border: none; /* No border for a clean look */
-    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box;
 }
 
 textarea {
-    height: auto; /* Allow the height to adjust for the textarea */
-    min-height: 100px; /* Set a minimum height */
+    height: auto;
+    min-height: 100px;
 }
 
 button {
@@ -171,11 +245,11 @@ footer {
 
 .social-links a {
     margin: 0 10px;
-    color: #fff; /* Change this to match your theme */
+    color: #fff;
     font-size: 24px;
     text-decoration: none;
 }
 
 .social-links a:hover {
-    color: #f39c12; /* Change this to your accent color */
+    color: #f39c12;
 }
